@@ -24,7 +24,7 @@ export const Statistics1 = () => {
         const fetchStatistics = async () => {
             try {
                 // const response = await fetch('http://localhost:5001/Check3'); // Replace with your actual API endpoint
-                const response = await fetch('https://backend-blood-donation.vercel.app/Check3'); // Replace with your actual API endpoint
+                const response = await fetch('https://backend-blood-donation.onrender.com/Check3'); // Replace with your actual API endpoint
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
