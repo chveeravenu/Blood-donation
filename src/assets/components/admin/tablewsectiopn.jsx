@@ -7,7 +7,7 @@ const BloodGroupTable = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:5001/fetch-data');
+        const response = await fetch('https://backend-blood-donation.onrender.com/fetch-data');
         const result = await response.json();
         setUserData(result);
       } catch (error) {
@@ -17,7 +17,6 @@ const BloodGroupTable = () => {
 
     fetchData();
   }, []);
-
   return (
     <div className='table-container'>
       <table className='styled-table'>

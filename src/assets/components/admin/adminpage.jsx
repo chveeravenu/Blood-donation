@@ -33,7 +33,7 @@ const AdminPage = () => {
   };
   const fetchEvents = async () => {
     try {
-      const response = await axios.get('http://localhost:5001/EventDetails');
+      const response = await axios.get('https://backend-blood-donation.onrender.com/EventDetails');
       if (response.status === 200) {
         setEventList(response.data);
       } else {
@@ -49,7 +49,7 @@ const AdminPage = () => {
       return;
     }
     try {
-      const response = await axios.get(`http://localhost:5001/aggrigation_testing/${college}/${branch}`);
+      const response = await axios.get(`https://backend-blood-donation.onrender.com/aggrigation_testing/${college}/${branch}`);
       if (response.status === 200) {
         const users = response.data || [];
         setUserData(users);
@@ -83,7 +83,7 @@ const AdminPage = () => {
     if (event && eventDate) {
       const newEvent = { event, eventDate, dayOfWeek: getDayOfWeek(eventDate) };
       try {
-        const response = await axios.post('http://localhost:5001/EventDetails', newEvent);
+        const response = await axios.post('https://backend-blood-donation.onrender.com/EventDetails', newEvent);
         if (response.status === 200) {
           setEventList((prev) => [...prev, { ...newEvent, _id: response.data._id }]);
           setEvent('');
@@ -106,7 +106,7 @@ const AdminPage = () => {
       return;
     }
     try {
-      const response = await axios.post('http://localhost:5001/DeleteEventDetails', { _id: eventToDelete._id });
+      const response = await axios.post('https://backend-blood-donation.onrender.com/DeleteEventDetails', { _id: eventToDelete._id });
       if (response.status === 200) {
         setEventList((prev) => prev.filter((_, i) => i !== index));
         toast.info('Event deleted successfully.');
@@ -126,7 +126,7 @@ const AdminPage = () => {
         college,
       };
       try {
-        const response = await axios.post('http://localhost:5001/DonarContributions', additionalFormData);
+        const response = await axios.post('https://backend-blood-donation.onrender.com/DonarContributions', additionalFormData);
         if (response.status === 200) {
           toast.success('Additional details submitted successfully!');
           setRollNumber('');
@@ -156,7 +156,7 @@ const AdminPage = () => {
       prof,
     };
     try {
-      const response = await axios.post('http://localhost:5001/Aggrigationtest', data);
+      const response = await axios.post('https://backend-blood-donation.onrender.com/Aggrigationtest', data);
       if (response.status === 200) {
         toast.success("Data submitted successfully");
         setuserCollege('');

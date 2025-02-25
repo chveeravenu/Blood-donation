@@ -13,7 +13,7 @@ function Piechart1() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:5001/checking1'); // Adjust the URL
+        const response = await fetch('https://backend-blood-donation.onrender.com/checking1'); // Adjust the URL
         const data = await response.json();
         
         // Map the data for the pie chart

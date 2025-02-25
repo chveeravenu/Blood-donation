@@ -16,7 +16,7 @@ function Nav3() {
     // Check if user is logged in
     const loggedInUser = localStorage.getItem('data');
     if (loggedInUser) {
-      axios.post("http://localhost:5000/req-roll", { "email": loggedInUser })
+      axios.post("https://backend-blood-donation.onrender.com/req-roll", { "email": loggedInUser })
         .then(res => {
           if (profileDivRef.current) {
             // Dynamically update background image using ref

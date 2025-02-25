@@ -24,7 +24,7 @@ const Dashboard = () => {
     useEffect(() => {
         const loggedInUser = localStorage.getItem('data');
         if (loggedInUser) {
-            axios.post("http://localhost:5001/req-da", { "email": loggedInUser })
+            axios.post("https://backend-blood-donation.onrender.com/req-da", { "email": loggedInUser })
                 .then(response => {
                     const data = response.data;
                     setpagevisible(true)
@@ -47,7 +47,7 @@ const Dashboard = () => {
                     toast.error("Error fetching student data!");  // Show error toast
                 });
             // const loggedInUser = localStorage.getItem('data');
-            // axios.post("http://localhost:5001/req-roll",{ "email": loggedInUser })
+            // axios.post("https://backend-blood-donation.onrender.com/req-roll",{ "email": loggedInUser })
             // .then(Result => {
                 
             // })
@@ -73,7 +73,7 @@ const Dashboard = () => {
             email
         };
 
-        axios.post("http://localhost:5001/update-dashboard", updatedData)
+        axios.post("https://backend-blood-donation.onrender.com/update-dashboard", updatedData)
             .then(response => {
                 console.log("Data successfully saved:", response.data);
                 setIsEditable(false);

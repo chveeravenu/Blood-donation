@@ -19,7 +19,7 @@ function Nav2() {
       setAdmin(true)
     }
     if (loggedInUser) {
-      axios.post("http://localhost:5001/req-roll", { "email": loggedInUser })
+      axios.post("https://backend-blood-donation.onrender.com/req-roll", { "email": loggedInUser })
         .then(res => {
           if (profileDivRef.current) {
             profileDivRef.current.style.backgroundImage = `url("https://info.aec.edu.in/ACET/StudentPhotos/${res.data}.jpg")`;

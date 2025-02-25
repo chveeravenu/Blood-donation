@@ -19,7 +19,7 @@ const Footer = () => {
     d.mail = data;
     console.log(d);
 
-    axios.post("http://localhost:5001/send-mail-footer", d)
+    axios.post("https://backend-blood-donation.onrender.com/send-mail-footer", d)
       .then(res => {
         console.log("it's working");
       })

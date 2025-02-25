@@ -30,7 +30,7 @@ const Log = () => {
   const handleLogin = async () => {
       const user_email = email
       console.log(email,password)
-      const res = await axios.post('http://localhost:5001/login', { email, password })
+      const res = await axios.post('https://backend-blood-donation.onrender.com/login', { email, password })
       .then(res => {
       localStorage.setItem("data",user_email)
       console.log("yes")
@@ -59,7 +59,7 @@ const Log = () => {
     }
 
     try {
-      const res = await axios.post('http://localhost:5001/signup', {
+      const res = await axios.post('https://backend-blood-donation.onrender.com/signup', {
         name,
         rollNumber,
         email,

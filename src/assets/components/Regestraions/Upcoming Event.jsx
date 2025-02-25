@@ -19,7 +19,7 @@ import 'react-toastify/dist/ReactToastify.css';  // Import the CSS for Toastify
     const [message, setMessage] = useState('');
 
     useEffect(() => {
-        fetch('http://localhost:5001/eventdetails')  
+        fetch('https://backend-blood-donation.onrender.com/eventdetails')  
           .then((response) => response.json())
           .then((data) => {
             setEvents(data); 
@@ -53,7 +53,7 @@ import 'react-toastify/dist/ReactToastify.css';  // Import the CSS for Toastify
             Event: eventname,
           };
        
-          axios.post("http://localhost:5001/Register-form", studentData)
+          axios.post("https://backend-blood-donation.onrender.com/Register-form", studentData)
           .then(response => {
             console.log("Success:", response.data);
             toast.success("Successfully Registered");
@@ -64,7 +64,7 @@ import 'react-toastify/dist/ReactToastify.css';  // Import the CSS for Toastify
             toast.error("Not Registered")
           });
 
-          axios.post("http://localhost:5001/send-api  ", studentData)
+          axios.post("https://backend-blood-donation.onrender.com/send-api  ", studentData)
       .then(response => {
         setMessage("Email sent successfully!");
       })
