@@ -31,7 +31,7 @@ const BarChart9 = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:5001/Check1'); // Adjust the URL
+        const response = await fetch('https://backend-blood-donation.onrender.com/Check1'); // Adjust the URL
         const data = await response.json();
 
         const colors = [
