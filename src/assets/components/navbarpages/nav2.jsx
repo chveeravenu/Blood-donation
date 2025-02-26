@@ -75,7 +75,7 @@ function Nav2() {
         ) : (
           <>
             <Link to="/login" className="login"><FontAwesomeIcon icon={faSignInAlt} /> login</Link>
-            <Link to="/signup" className="signup"><FontAwesomeIcon icon={faUserPlus} /> signup</Link>
+{/*             <Link to="/signup" className="signup"><FontAwesomeIcon icon={faUserPlus} /> signup</Link> */}
           </>
         )}
       </div>
@@ -104,7 +104,7 @@ function Nav2() {
             ) : (
               <>
                 <Link to="/login" className="login l"><FontAwesomeIcon icon={faSignInAlt} /> login</Link>
-                <Link to="/signup" className="signup s"><FontAwesomeIcon icon={faUserPlus} /> signup</Link>
+{/*                 <Link to="/signup" className="signup s"><FontAwesomeIcon icon={faUserPlus} /> signup</Link> */}
               </>
             )}
           </div>
